@@ -47,14 +47,23 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+	var imagenes = $("#carruselSecc").children();
+	var numImg = imagenes.lenght;	
+	var dots = $("section").children(".dot");	
 	// Flecha siguiente
-	$("#sig").click(function(){
-		var siguiente = $("#carruselSecc").children();
-		var dots = $("section").children(".dot");
+	$("#sig").click(function(){		
 		$("img").hide();
     	$("#img" + indice).next().show();
         $(".dot").removeClass("active");
+        $("#dot" + indice).next().addClass("active");
         indice++;
-        $("#dot" + indice).addClass("active");
+    });
+    // Flecha anterior
+	$("#ant").click(function(){
+		$("img").hide();
+    	$("#img" + indice).prev().show();
+        $(".dot").removeClass("active");
+        $("#dot" + indice).prev().addClass("active");
+        indice--;
     });
 });

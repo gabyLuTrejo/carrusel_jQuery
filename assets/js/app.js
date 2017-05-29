@@ -4,8 +4,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-	$("img").hide();
-    $("#img0").show();
+	
     $("#dot0").click(function(){
         $("img").hide();
         $("#img0").show();

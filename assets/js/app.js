@@ -8,14 +8,15 @@ var cargarPagina = function () {
 };
 
 var cambioDeImagen = function () {
-    target=parseInt($(this).data( 'target'));
+    target=parseInt($(this).data("target"));
     mostrarImagen(target);    
 };
 
 var mostrarImagen = function (target) {
     $("div.activo").removeClass("activo");
     $("div[data-slide='" + target + "']").addClass("activo");
-    
+    $("button.seleccionado").removeClass("seleccionado");
+    $("button[data-target='" + target + "']").addClass("seleccionado");
     
 };
 
